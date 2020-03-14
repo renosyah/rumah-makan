@@ -31,7 +31,7 @@ http://localhost/api/all_closes_rumah_makan.php?offset=0&limit=10
 
 ```
 
-http://localhost/api/all_closes_rumah_makan.php?current_latitude=-7.787520&current_longitude=110.432569&range=0.06&offset=0&limit=10
+http://localhost/api/all_closes_rumah_makan.php?current_latitude=-7.792810&current_longitude=110.408499&range=1.0&offset=0&limit=10
 
 
 ```
