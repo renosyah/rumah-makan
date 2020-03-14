@@ -19,6 +19,7 @@ class rumah_makan {
     public function add($db) {
 
         $result_query = new result_query();
+        $result_query->data = "ok";
 
         $query = "INSERT INTO rumah_makan (nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar) VALUES (?,?,?,?,?,?,?)";
         $stmt = $db->prepare($query);
@@ -27,8 +28,9 @@ class rumah_makan {
         $stmt->execute();
         if ($stmt->error != ""){
             $result_query->error =  "error at add new rumah makan : ".$stmt->error;
+            $result_query->data = "not ok";
         }
-
+        
         $stmt->close();
 
         return $result_query;
@@ -159,6 +161,7 @@ class rumah_makan {
     
     public function update($db) {
         $result_query = new result_query();
+        $result_query->data = "ok";
 
         $query = "UPDATE rumah_makan SET nama = ?,url_menu = ?,alamat = ?,deskripsi = ?,latitude = ?,longitude = ?,url_gambar = ? WHERE id=?";
         $stmt = $db->prepare($query);
@@ -167,6 +170,7 @@ class rumah_makan {
         $stmt->execute();
         if ($stmt->error != ""){
             $result_query-> error = "error at update one rumah makan : ".$stmt->error;
+            $result_query->data = "not ok";
             $stmt->close();
             return $result_query;
         }
@@ -178,6 +182,7 @@ class rumah_makan {
     
     public function delete($db) {
         $result_query = new result_query();
+        $result_query->data = "ok";
 
         $query = "DELETE FROM rumah_makan WHERE id=?";
         $stmt = $db->prepare($query);
@@ -186,6 +191,7 @@ class rumah_makan {
         $stmt->execute();
         if ($stmt->error != ""){
             $result_query-> error = "error at delete one rumah makan : ".$stmt->error;
+            $result_query->data = "not ok";
             $stmt->close();
             return $result_query;
         }
