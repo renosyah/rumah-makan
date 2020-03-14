@@ -112,15 +112,17 @@ class rumah_makan {
 
         $all = array();
         $query = "SELECT 
-                    id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar 
+                    id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar
                 FROM 
                     rumah_makan 
                 WHERE
-                    (((degrees(acos(sin(radians(?)) * sin(radians(latitude)) + cos(radians(?)) * cos(radians(latitude)) * cos(radians(? - longitude)))) * 60 * 1.1515) * 1.609344) BETWEEN 0.0 AND ?)
+                    ((degrees(acos(sin(radians(?)) * sin(radians(latitude)) + cos(radians(?)) * cos(radians(latitude)) * cos(radians(? - longitude)))) * 60 * 1.1515) * 1.609344) < ?
+                ORDER BY 
+                    ((degrees(acos(sin(radians(?)) * sin(radians(latitude)) + cos(radians(?)) * cos(radians(latitude)) * cos(radians(? - longitude)))) * 60 * 1.1515) * 1.609344) ASC
                 LIMIT ? OFFSET ?";
 
         $stmt = $db->prepare($query);
-        $stmt->bind_param('ddddii',$current_latitude,$current_latitude,$current_longitude,$range,$limit,$offset);
+        $stmt->bind_param('dddddddii',$current_latitude,$current_latitude,$current_longitude,$range,$current_latitude,$current_latitude,$current_longitude,$limit,$offset);
     
         $stmt->execute();
         if ($stmt->error != ""){
