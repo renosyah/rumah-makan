@@ -68,13 +68,27 @@ class rumah_makan {
         return $result_query;
     }
     
-    public function all($db,$offset,$limit) {
+    public function all($db,$list_query) {
         $result_query = new result_query();
 
         $all = array();
-        $query = "SELECT id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar FROM rumah_makan LIMIT ? OFFSET ?";
+        $query = "SELECT 
+                    id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar 
+                FROM 
+                    rumah_makan
+                WHERE
+                    ".$list_query->search_by." LIKE ?
+                ORDER BY
+                    ".$list_query->order_by." ".$list_query->order_dir." 
+                LIMIT ? 
+                OFFSET ?";
+
         $stmt = $db->prepare($query);
-        $stmt->bind_param('ii', $limit,$offset);
+
+        $search = "%".$list_query->search_value."%";
+        $offset = $list_query->offset;
+        $limit =  $list_query->limit;
+        $stmt->bind_param('sii',$search ,$limit, $offset);
     
         $stmt->execute();
         if ($stmt->error != ""){
@@ -109,7 +123,7 @@ class rumah_makan {
         return $result_query;
     }
 
-    public function all_closes($db,$current_latitude,$current_longitude,$range,$offset,$limit) {
+    public function all_closes($db,$current_latitude,$current_longitude,$range,$list_query) {
         $result_query = new result_query();
 
         $all = array();
@@ -119,12 +133,18 @@ class rumah_makan {
                     rumah_makan 
                 WHERE
                     ((degrees(acos(sin(radians(?)) * sin(radians(latitude)) + cos(radians(?)) * cos(radians(latitude)) * cos(radians(? - longitude)))) * 60 * 1.1515) * 1.609344) < ?
+                AND
+                    ".$list_query->search_by." LIKE ?
                 ORDER BY 
                     ((degrees(acos(sin(radians(?)) * sin(radians(latitude)) + cos(radians(?)) * cos(radians(latitude)) * cos(radians(? - longitude)))) * 60 * 1.1515) * 1.609344) ASC
                 LIMIT ? OFFSET ?";
 
         $stmt = $db->prepare($query);
-        $stmt->bind_param('dddddddii',$current_latitude,$current_latitude,$current_longitude,$range,$current_latitude,$current_latitude,$current_longitude,$limit,$offset);
+
+        $search = "%".$list_query->search_value."%";
+        $offset = $list_query->offset;
+        $limit =  $list_query->limit;
+        $stmt->bind_param('ddddsdddii',$current_latitude,$current_latitude,$current_longitude,$range,$search,$current_latitude,$current_latitude,$current_longitude,$limit,$offset);
     
         $stmt->execute();
         if ($stmt->error != ""){
