@@ -11,6 +11,6 @@ CREATE TABLE rumah_makan (
     alamat TEXT,
     deskripsi TEXT,
     latitude FLOAT(53),
-	longitude FLOAT(53),
+    longitude FLOAT(53),
     url_gambar TEXT
 );    
