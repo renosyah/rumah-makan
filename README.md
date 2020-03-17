@@ -38,7 +38,7 @@ http://localhost/api/all_rumah_makan.php?search_by=nama&search_value=RM&order_by
 
 ```
 
-http://localhost/api/all_closes_rumah_makan.php?current_latitude=-7.792810&current_longitude=110.408499&range=1.0&search_by=nama&search_value=RM&order_by=nama&order_dir=ASC&offset=0&limit=10
+http://localhost/api/all_closes_rumah_makan.php?current_latitude=-7.792810&current_longitude=110.408499&range=1.0&search_by=nama&search_value=&offset=0&limit=10
 
 
 ```

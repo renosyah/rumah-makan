@@ -11,7 +11,7 @@ function get_connection($config){
     $port = $configs['database']['port'];
     $dbname = $configs['database']['name'];
     
-    $db = new mysqli($host.":".$port,$username,$password,$dbname);
+    $db = new mysqli($host,$username,$password,$dbname);
     if ($db->connect_error) {
         die("Connection failed: " . $conn->connect_error);
     }

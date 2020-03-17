@@ -19,3 +19,4 @@ vendor/
 cockroach-data/
 bin/
 credential/
+000hosting.txt
