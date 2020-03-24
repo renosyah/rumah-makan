@@ -5,6 +5,7 @@ include("result_query.php");
 class rumah_makan {
     
     public $id;
+    public $kota_id;
     public $nama;
     public $url_menu;
     public $alamat;
@@ -21,9 +22,9 @@ class rumah_makan {
         $result_query = new result_query();
         $result_query->data = "ok";
 
-        $query = "INSERT INTO rumah_makan (nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar) VALUES (?,?,?,?,?,?,?)";
+        $query = "INSERT INTO rumah_makan (nama,kota_id,url_menu,alamat,deskripsi,latitude,longitude,url_gambar) VALUES (?,?,?,?,?,?,?,?)";
         $stmt = $db->prepare($query);
-        $stmt->bind_param('ssssdds', $this->nama,$this->url_menu,$this->alamat,$this->deskripsi,$this->latitude,$this->longitude,$this->url_gambar);
+        $stmt->bind_param('sisssdds', $this->nama,$this->kota_id,$this->url_menu,$this->alamat,$this->deskripsi,$this->latitude,$this->longitude,$this->url_gambar);
     
         $stmt->execute();
         if ($stmt->error != ""){
@@ -40,7 +41,7 @@ class rumah_makan {
         $result_query = new result_query();
 
         $one = new rumah_makan();
-        $query = "SELECT id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar FROM rumah_makan WHERE id=? LIMIT 1";
+        $query = "SELECT id,kota_id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar FROM rumah_makan WHERE id=? LIMIT 1";
         $stmt = $db->prepare($query);
         $stmt->bind_param('i', $this->id);
     
@@ -54,6 +55,7 @@ class rumah_makan {
         $result = $stmt->get_result()->fetch_assoc();
 
         $one->id = $result['id'];
+        $one->kota_id = $result['kota_id'];
         $one->nama = $result['nama'];
         $one->url_menu = $result['url_menu'];
         $one->alamat = $result['alamat'];
@@ -73,7 +75,7 @@ class rumah_makan {
 
         $all = array();
         $query = "SELECT 
-                    id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar 
+                    id,kota_id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar 
                 FROM 
                     rumah_makan
                 WHERE
@@ -107,6 +109,7 @@ class rumah_makan {
         while ($result = $rows->fetch_assoc()){
             $one = new rumah_makan();
             $one->id = $result['id'];
+            $one->kota_id = $result['kota_id'];
             $one->nama = $result['nama'];
             $one->url_menu = $result['url_menu'];
             $one->alamat = $result['alamat'];
@@ -128,7 +131,7 @@ class rumah_makan {
 
         $all = array();
         $query = "SELECT 
-                    id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar
+                    id,kota_id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar
                 FROM 
                     rumah_makan 
                 WHERE
@@ -163,6 +166,7 @@ class rumah_makan {
         while ($result = $rows->fetch_assoc()){
             $one = new rumah_makan();
             $one->id = $result['id'];
+            $one->kota_id = $result['kota_id'];
             $one->nama = $result['nama'];
             $one->url_menu = $result['url_menu'];
             $one->alamat = $result['alamat'];
@@ -183,9 +187,9 @@ class rumah_makan {
         $result_query = new result_query();
         $result_query->data = "ok";
 
-        $query = "UPDATE rumah_makan SET nama = ?,url_menu = ?,alamat = ?,deskripsi = ?,latitude = ?,longitude = ?,url_gambar = ? WHERE id=?";
+        $query = "UPDATE rumah_makan SET kota_id = ?,nama = ?,url_menu = ?,alamat = ?,deskripsi = ?,latitude = ?,longitude = ?,url_gambar = ? WHERE id=?";
         $stmt = $db->prepare($query);
-        $stmt->bind_param('ssssddsi', $this->nama,$this->url_menu,$this->alamat,$this->deskripsi,$this->latitude,$this->longitude,$this->url_gambar,$this->id);
+        $stmt->bind_param('issssddsi',$this->kota_id,$this->nama,$this->url_menu,$this->alamat,$this->deskripsi,$this->latitude,$this->longitude,$this->url_gambar,$this->id);
     
         $stmt->execute();
         if ($stmt->error != ""){

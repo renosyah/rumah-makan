@@ -6,6 +6,7 @@ include("../model/db.php");
 
 $rm = new rumah_makan();
 $rm ->id = $_POST['id'];
+$rm ->kota_id= $_POST['kota_id'];
 $rm ->nama = $_POST['nama'];
 $rm ->url_menu = $_POST['url_menu'];
 $rm ->alamat = $_POST['alamat'];
