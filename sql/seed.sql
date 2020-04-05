@@ -1,104 +1,182 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.5
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost:3306
+-- Generation Time: Apr 05, 2020 at 09:26 AM
+-- Server version: 10.3.16-MariaDB
+-- PHP Version: 7.3.12
 
-INSERT INTO kota (id,nama) VALUES (1,'Sleman'),(2,'Kulon P'),(3,'Gng Kidul'),(4,'Bantul'),(5,'Jogja Kt');
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
 
-INSERT INTO rumah_makan (id,kota_id,nama,url_menu,alamat,deskripsi,latitude,longitude,url_gambar) VALUES
-(1,1,'Rumah Makan No 1','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.792158,110.404832,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(2,5,'Rumah Makan No 2','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.781332,110.412774,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(3,1,'Rumah Makan No 3','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.807204,110.415026,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(4,1,'Rumah Makan No 4','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.798721,110.392098,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(5,1,'Rumah Makan No 5','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.799645,110.395934,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(6,3,'Rumah Makan No 6','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.774960,110.415128,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(7,2,'Rumah Makan No 7','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.813941,110.432652,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(8,1,'Rumah Makan No 8','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.819771,110.418053,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(9,3,'Rumah Makan No 9','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.793223,110.401667,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(10,4,'Rumah Makan No 10','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.781090,110.406944,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(11,2,'Rumah Makan No 11','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.786117,110.421960,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(12,4,'Rumah Makan No 12','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.754049,110.400657,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(13,5,'Rumah Makan No 13','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.809646,110.417780,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(14,2,'Rumah Makan No 14','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.739426,110.411848,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(15,2,'Rumah Makan No 15','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.807312,110.375125,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(16,5,'Rumah Makan No 16','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.827114,110.413925,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(17,4,'Rumah Makan No 17','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.759543,110.469796,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(18,3,'Rumah Makan No 18','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.763785,110.384856,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(19,2,'Rumah Makan No 19','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.766936,110.393360,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(20,5,'Rumah Makan No 20','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.817321,110.399663,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(21,3,'Rumah Makan No 21','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.854465,110.394494,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(22,1,'Rumah Makan No 22','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.867192,110.375223,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(23,2,'Rumah Makan No 23','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.722763,110.345193,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(24,3,'Rumah Makan No 24','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.706577,110.352482,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(25,4,'Rumah Makan No 25','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.810330,110.513590,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(26,2,'Rumah Makan No 26','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.837309,110.513840,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(27,5,'Rumah Makan No 27','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.720625,110.307605,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(28,2,'Rumah Makan No 28','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.872615,110.417504,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(29,1,'Rumah Makan No 29','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.877870,110.443879,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(30,5,'Rumah Makan No 30','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.809536,110.512852,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(31,3,'Rumah Makan No 31','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.726181,110.303013,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(32,5,'Rumah Makan No 32','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.822342,110.377341,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(33,2,'Rumah Makan No 33','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.770025,110.477705,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(34,1,'Rumah Makan No 34','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.866830,110.518090,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(35,1,'Rumah Makan No 35','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.779130,110.378559,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(36,2,'Rumah Makan No 36','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.715483,110.473026,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(37,5,'Rumah Makan No 37','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.839864,110.320178,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(38,3,'Rumah Makan No 38','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.843001,110.281043,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(39,4,'Rumah Makan No 39','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.944702,110.432132,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(40,2,'Rumah Makan No 40','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.798943,110.580245,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(41,5,'Rumah Makan No 41','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.787010,110.391200,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(42,1,'Rumah Makan No 42','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.702007,110.352685,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(43,3,'Rumah Makan No 43','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.679545,110.449707,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(44,1,'Rumah Makan No 44','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.842650,110.516504,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(45,4,'Rumah Makan No 45','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.861532,110.453645,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(46,4,'Rumah Makan No 46','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.663861,110.349417,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(47,3,'Rumah Makan No 47','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.789799,110.321209,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(48,1,'Rumah Makan No 48','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.766078,110.380251,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(49,5,'Rumah Makan No 49','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.730629,110.240402,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(50,5,'Rumah Makan No 50','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.841088,110.437328,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(51,5,'Rumah Makan No 51','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.950060,110.455165,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(52,1,'Rumah Makan No 52','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.820473,110.463744,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(53,5,'Rumah Makan No 53','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.658549,110.465516,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(54,3,'Rumah Makan No 54','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.858362,110.468584,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(55,1,'Rumah Makan No 55','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.792748,110.528297,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(56,1,'Rumah Makan No 56','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.737595,110.608424,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(57,2,'Rumah Makan No 57','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.944772,110.604814,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(58,1,'Rumah Makan No 58','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.971579,110.263248,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(59,1,'Rumah Makan No 59','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.840996,110.365738,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(60,4,'Rumah Makan No 60','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.543330,110.423108,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(61,1,'Rumah Makan No 61','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.543044,110.414617,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(62,2,'Rumah Makan No 62','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.909992,110.606200,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(63,3,'Rumah Makan No 63','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.780698,110.667951,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(64,2,'Rumah Makan No 64','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.033672,110.502433,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(65,4,'Rumah Makan No 65','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.983997,110.267923,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(66,3,'Rumah Makan No 66','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.023009,110.223679,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(67,2,'Rumah Makan No 67','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.712237,110.165892,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(68,2,'Rumah Makan No 68','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.790131,110.098126,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(69,4,'Rumah Makan No 69','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.978836,110.265230,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(70,4,'Rumah Makan No 70','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.858946,110.501169,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(71,4,'Rumah Makan No 71','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.680954,110.240847,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(72,3,'Rumah Makan No 72','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.554347,110.518112,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(73,1,'Rumah Makan No 73','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.667534,110.696468,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(74,1,'Rumah Makan No 74','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.049096,110.314318,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(75,2,'Rumah Makan No 75','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.025128,110.367526,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(76,3,'Rumah Makan No 76','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.558566,110.216006,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(77,1,'Rumah Makan No 77','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.504114,110.537636,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(78,3,'Rumah Makan No 78','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.010981,110.585359,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(79,3,'Rumah Makan No 79','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.698407,110.742971,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(80,5,'Rumah Makan No 80','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.532879,110.204239,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(81,1,'Rumah Makan No 81','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.899252,110.733691,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(82,2,'Rumah Makan No 82','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.490794,110.256136,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(83,4,'Rumah Makan No 83','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.929324,110.255580,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(84,4,'Rumah Makan No 84','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.836484,110.608832,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(85,3,'Rumah Makan No 85','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.928917,110.724129,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(86,2,'Rumah Makan No 86','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.582608,110.500103,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(87,4,'Rumah Makan No 87','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.826333,110.453233,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(88,5,'Rumah Makan No 88','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.895466,110.706414,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(89,5,'Rumah Makan No 89','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.038808,110.568252,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(90,3,'Rumah Makan No 90','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.592719,110.056475,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(91,3,'Rumah Makan No 91','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.581865,110.219680,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(92,5,'Rumah Makan No 92','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.508592,110.676953,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(93,5,'Rumah Makan No 93','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.787076,110.347863,'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
-(94,2,'Rumah Makan No 94','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.057325,110.205194,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(95,1,'Rumah Makan No 95','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.913460,110.487220,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(96,3,'Rumah Makan No 96','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.588249,110.253619,'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
-(97,4,'Rumah Makan No 97','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.586930,110.293488,'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
-(98,2,'Rumah Makan No 98','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.923682,110.028109,'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
-(99,1,'Rumah Makan No 99','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-8.140818,110.174503,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
-(100,1,'Rumah Makan No 100','https://www.chilis.com/menu','jl Raya Janti 1','Lorem',-7.619249,110.152800,'https://rumahmakanapi.000webhostapp.com/img/resto_1.png');
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `id12953036_rm_db`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `kota`
+--
+
+CREATE TABLE `kota` (
+  `id` int(11) NOT NULL,
+  `nama` text COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `kota`
+--
+
+INSERT INTO `kota` (`id`, `nama`) VALUES
+(1, 'Sleman'),
+(2, 'Kulon P'),
+(3, 'Gng Kidul'),
+(4, 'Bantul'),
+(5, 'Jogja Kt');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `rumah_makan`
+--
+
+CREATE TABLE `rumah_makan` (
+  `id` int(11) NOT NULL,
+  `kota_id` int(11) NOT NULL,
+  `nama` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `url_menu` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `alamat` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `deskripsi` text COLLATE utf8_unicode_ci DEFAULT NULL,
+  `latitude` double DEFAULT NULL,
+  `longitude` double DEFAULT NULL,
+  `url_gambar` text COLLATE utf8_unicode_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `rumah_makan`
+--
+
+INSERT INTO `rumah_makan` (`id`, `kota_id`, `nama`, `url_menu`, `alamat`, `deskripsi`, `latitude`, `longitude`, `url_gambar`) VALUES
+(1, 5, 'Nasi Pedas Madame', 'https://www.instagram.com/p/B1oA2ibF7la/', 'Jl. Pramuka No.50, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161', '10.00-00.00\r\nJumat 24 jam', -7.820788, 110.388479, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(2, 5, 'Algojo Seafood', 'https://www.instagram.com/p/B6HPiTllzY9/', 'Jl. Letkol Subadri 9, Klitren, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55222', '11.00-23.00', -7.786495, 110.378787, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(3, 5, 'Iga Bakar Si Bangor', 'https://www.instagram.com/p/B-TVR-1BETE/', 'Jl. Sorogenen Jl. Nitikan Baru No.27B, Sorosutan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55162', '12.00-21.30\r\nJumat 13.00-21.30', -7.825127, 110.384367, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(4, 5, 'Katombo Ikan Bakar', 'https://www.instagram.com/p/B1oApCDFzhn/', 'Jl. Rogoyudan 1 No.8, Rogoyudan, Sinduadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55284', '08.00-22.00', -7.770786, 110.359864, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(5, 5, 'Bubur Hayam', 'https://www.instagram.com/p/B1YzqaFFIYd/', 'Jl. Johar Nurhadi No.5, Kotabaru, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55224', '11.00-23.00', -7.784111, 110.375534, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(6, 5, 'Nasgor Pos Babat', 'https://www.instagram.com/p/B1Y2JvDlMc5/', 'Jl. Cik Di Tiro No.31, Terban, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55223', '11.00-21.00\r\nMinggu tutup', -7.777114, 110.375638, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(7, 5, 'TIWUK', 'https://www.instagram.com/p/BofoB5jB20c/', 'Jl. Letjen Suprapto No.60B, Ngampilan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55261', '10.00-23.00', -7.797263, 110.356611, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(8, 5, 'Kedai Jagoan', 'https://www.instagram.com/p/B9S5lJ7hbWO/', 'Jl. Taman Siswa No.34 B, Wirogunan, Kec. Mergangsan, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55151', '08.30-20.00', -7.805925, 110.377682, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(9, 5, 'Iwak Bugisan', 'https://www.instagram.com/p/B33YPj1Bo5W/', 'Jl. Sugeng Jeroni No.6, Gedongkiwo, Kec. Mantrijeron, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55142', '15.00-22.00', -7.812547, 110.354654, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(10, 5, 'Sego Njamoer', 'https://www.instagram.com/p/BiQkOUMl5Y4/', 'Jl. Glagahsari, Tahunan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55164', '09.00-21.00', -7.810533, 110.387307, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(11, 5, 'Ikan Bakar Legian', 'https://www.instagram.com/p/Bl4dKdPFTCY/', 'Jl. Magelang No.100, Kricak, Kec. Tegalrejo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55242', '11.00-23.00', -7.776228, 110.361216, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(12, 5, 'warunge simbah 137', 'https://www.instagram.com/warunge_simbah137/', 'UH 4/137, Gg. Glagahwangi, Warungboto, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55164', '11.00-21.00', -7.803553, 110.387666, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(13, 5, 'Soto Surabaya Tunjungan', 'https://www.instagram.com/p/Boc4DrOADwV/', 'Jl. Gambiran No.35, Pandeyan, Kec. Umbulharjo, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55161', '6.30-14.00', -7.816149, 110.391278, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(14, 5, 'Gudeg Manggar Bu Tjondro', 'https://www.instagram.com/gudegmanggar_bu_tjondro/', 'Jalan Bantul No.32 Suryodiningratan, Gedongkiwo, Kec. Mantrijeron, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55142', '18.00-00.00\r\nSenin tutup', -7.814995, 110.35595, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(15, 5, 'Lempah Kuning Bang Rob', 'https://www.instagram.com/p/B-TVR-1BETE/', 'Jln Sekardwijan No.24, Klitren, Kec. Gondokusuman, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55225', '10.00-20.00', -7.785627, 110.38618, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(16, 5, 'Mie Sambal Nusantara', 'https://www.instagram.com/p/B83IJ-JhQ8n/', 'Jl. Karangmalang, Karang Malang, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '11.00-21.00', -7.777365, 110.384791, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(17, 1, 'Chickenpedia jl. perumnas', 'https://www.instagram.com/p/B9RHz7qF2pP/', 'Jl. Perumnas No.C1, Dabag, Condongsari, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '09.00-10.00', -7.767307, 110.405929, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(18, 1, 'Sop djadoel', 'https://www.instagram.com/p/Bh5EEauFCrJ/', 'Jl. Candi Sambisari, Sambisari, Purwomartani, Kec. Kalasan, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55571', '07.00-19.00', -7.762346, 110.448108, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(19, 1, 'SAMBEL BELUT ODETTA', 'https://www.instagram.com/p/B9RHcqCFHz5/', 'Jl. Kapten Haryadi, Gondangan, Sardonoharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55581', '10.00-20.00', -7.722772, 110.405281, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(20, 1, 'Sego ambyar', 'https://www.instagram.com/p/B8r9GZ2FiRx/', 'Jl. Brojolamatan No.323, Gejayan, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '10.00-21.30', -7.757208, 110.395297, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(21, 1, 'Gule Pikul', 'https://www.instagram.com/p/B3mVAwTFGbZ/', 'Jl. Damai No.41-29, Wonorejo, Sariharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55581', '11.00-21.00', -7.732717, 110.385384, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(22, 1, 'Roemah Tjerita Restaurant', 'https://www.instagram.com/p/Bt4gMc7H8F3/', 'Jl. Demangan Baru No.26, Mrican, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '', -7.776092, 110.393469, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(23, 1, 'Joglo Pari Sewu', 'https://www.instagram.com/p/Brv8333BVTh/', 'Bromonilan RT.008/RW.003, Bromonilan, Purwomartani, Kec. Kalasan, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55571', '10.00-17.00\r\nSabtu 09.00-20.00\r\nMinggu 09.00-20.00', -7.742794, 110.446089, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(24, 1, 'Mbok Mingkem Jogja', 'https://www.instagram.com/p/BpoOcwsg6Ra/', 'Jl. Ringin Raya No.8, RW.4, Ngringin, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '', -7.75823, 110.409431, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(25, 1, 'Sei sapi kana', 'https://www.instagram.com/p/B7NMd8wFowH/', 'Jl. Seturan Raya Jl. Raya Kledokan No.7, Kledokan, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '11.00-22.00', -7.768979, 110.409866, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(26, 1, 'Lalawuh Sunda', 'https://www.instagram.com/p/BlbyDO9lk3E/', 'Jl. Rogoyudan 1 No.1, Rogoyudan, Sinduadi, Kec. Mlati, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55242', '10.00-22.00', -7.77046, 110.360575, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(27, 1, 'Warunk Penasaran', 'https://www.instagram.com/p/BltopDWla6z/', 'Jl. Godean No.9, Area Sawah, Sidoagung, Kec. Godean, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55264', '10.00-20.00', -7.769407, 110.300879, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(28, 1, 'Warung Ocik', 'https://www.instagram.com/p/BmZZoR3Ffv-/', 'Perum Tirta Kirana, Jl. Nologaten No.1A, Tempel, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '08.00-22.00', -7.779005, 110.400379, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(29, 1, 'Tongkleng Nglotok', 'https://www.instagram.com/p/B6pJKjClyHw/', 'Jl. Masjid Al Jihad, Dayu, Sinduharjo, Kec. Ngaglik, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55581', '10.00-22.00', -7.731179, 110.393076, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(30, 1, 'Erista Garden', 'https://www.instagram.com/p/B6pHq-pF5QQ/', 'Area Sawah, Pakembinangun, Kec. Pakem, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55582', '08.00-17.30', -7.659681, 110.427371, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(31, 1, 'Es Teler Mendunia', '', 'Jl. Selokan Mataram Cepit Baru No.442, Pringwulung, Condongcatur, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281', '10.00-18.00', -7.768034, 110.397506, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(32, 4, 'Waroeng Tedoeh', 'https://www.instagram.com/p/B9Qq92Clsqj/', 'Sambikerep, Bangunjiwo, Kec. Kasihan, Bantul, Daerah Istimewa Yogyakarta 55184', '09.00-21.00', -7.843086, 110.28638, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(33, 4, 'Soramen Jogja', 'https://www.instagram.com/p/B1Y1tuOFbRH/', 'Jl. Bugisan Selatan No.33, Tegal Senggotan, Tirtonirmolo, Kec. Kasihan, Bantul, Daerah Istimewa Yogyakarta 55184', '11.00-22.00', -7.817271, 110.348532, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(34, 4, 'Gudeg Yu Sum', 'https://www.instagram.com/p/BpaywX3Bz7f/', 'Jl. Imogiri Tim. No.169, Nglebeng, Tamanan, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55191', '06.00-21.00', -7.838196, 110.391526, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(35, 4, 'Mie Ayam Bu Tumini 2', 'https://www.instagram.com/p/B3kFJZ1AzPu/', 'Km 6,5 Nglebeng, Jl. Imogiri Tim., Krobokan, Tamanan, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55191', '10.00-17.00', -7.842249, 110.391223, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(36, 4, 'Warung Makan Ikan Segar', 'https://www.instagram.com/ikansegarbantul/', 'Jalan Kolonel Sugiono, Ringinharjo, Kecamatan Bantul, Deresan, Ringinharjo, Kec. Bantul, Bantul, Daerah Istimewa Yogyakarta 55712', '09.00-21.00\r\nJumat tutup', -7.887756, 110.317376, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(37, 4, 'Mie Ayam Pak Tupon', 'https://www.instagram.com/p/B4SJ09rgqLN/', 'Jl, Bantul Karang, Ringinharjo, Kec. Bantul, Bantul, Daerah Istimewa Yogyakarta 55712', '09.30-15.30', -7.894538, 110.318607, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(38, 4, 'Warung Siktang', 'https://www.instagram.com/warung_siktang/', 'Jl. Imogiri Barat, Barongan, Sumberagung, Kec. Jetis, Bantul, Daerah Istimewa Yogyakarta 55781', '16.00-20.00\r\nRabu tutup', -7.910047, 110.372628, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(39, 4, 'DJOERAGAN MIE AYAM PEDAS', 'https://www.instagram.com/djoeragan_mieayampedas/', 'Jl. Letjen. Suprapto No.86, Area Sawah, Bantul, Kec. Bantul, Bantul, Daerah Istimewa Yogyakarta 55711', '09.00-18.30\r\nJumat 13.00-18.30', -7.886959, 110.332334, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(40, 4, 'Kopi Tubruk Den Jayeng', 'https://www.instagram.com/kopitubrukdenjayeng/', 'Jl. Samas KM 22, Daganpinggir, Selo, Sidomulyo, Bambanglipuro, Bantul Regency, Special Region of Yogyakarta 55764', '12.00-22.00', -7.965069, 110.29767, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(41, 4, 'Ingkung Kuali', 'https://www.instagram.com/ingkungkuali/', 'Jl. Guwosari, Kedung, Guwosari, Kec. Pajangan, Bantul, Daerah Istimewa Yogyakarta 55751', '11.00-21.00', -7.886709, 110.301638, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(42, 4, 'Thiwul Ayu Mbok Sum', 'https://www.instagram.com/thiwulayu_mboksum/', 'Jalan Mangunan KM.4.5, RT.15, Mangunan, Dlingo, Cempuk, Mangunan, Dlingo, Bantul, Daerah Istimewa Yogyakarta 55783', '05.00-19.00', -7.930948, 110.424689, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(44, 4, 'Kebon Ndhelik', 'https://www.instagram.com/kebonndhelikjanti/', 'Jl. Janti Jl. Jogja Ring Road Tim. No.88K, Karang Janbe, Karang Jambe, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198', '10.00-21.00', -7.792533, 110.409791, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(45, 4, 'Bima Kroda', 'https://www.instagram.com/babigulingjogja/', 'Jl. Sorowajan No.116C, RT.12/RW.11, Modalan, Banguntapan, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198', '09.00-21.00\r\nSelasa tutup\r\nNon halal', -7.79318, 110.403186, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(46, 4, 'Gudeg Bu Tjitro', 'https://www.instagram.com/gudegbutjitro1925janti/', 'Jl. Janti No.330, Modalan, Banguntapan, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55281', '08.00-22.00', -7.798447, 110.40268, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(47, 4, 'Warung Bu Komang', 'https://www.instagram.com/warungbukomang/', 'Jl. Pura Sorowajan No.201, Jomblangan, Banguntapan, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198', '09.00-21.00', -7.793751, 110.401439, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(48, 4, 'RM Dainang', 'https://www.instagram.com/rmdainang/', 'Jl. Sorowajan No.106, Modalan, Banguntapan, Kec. Banguntapan, Bantul, Daerah Istimewa Yogyakarta 55198', '10.00-21.00', -7.792694, 110.402214, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(49, 4, 'Warung Enaak', 'https://www.instagram.com/p/B-dyLpADDl1/', 'Jalan Jendral A. Yani, n, Badegan, Bantul, Kec. Bantul, Bantul, Daerah Istimewa Yogyakarta 55711', '10.30-21.30', -7.880503, 110.333951, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(50, 4, 'Manggar Manding', 'https://www.instagram.com/p/B54MeL3AMmY/', 'Jl. Parangtritis No.11,5, Kadibeso, Sabdodadi, Kec. Bantul, Bantul, Daerah Istimewa Yogyakarta 55781', '09.00-21.00', -7.895833, 110.352758, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(51, 2, 'Markas Seafood', 'https://www.instagram.com/markasseafoodmurah.wates/', 'Jl. Gadingan, Durungan, Wates, Kabupaten Kulon Progo, Daerah Istimewa Yogyakarta 55651', '11.30-20.30', -7.865654, 110.159944, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(52, 2, 'Tuancrabs', 'https://www.instagram.com/tuancrabs_/', 'komplek kasatrian no.10 gunung gempal, kulonprogo, Gn. Gempal, Giri Peni, Wates, Kulon Progo Regency, Special Region of Yogyakarta 55651', '10.00-19.00\r\nSenin tutup', -7.866804, 110.169961, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(53, 2, 'Sambel Coss Mak Nunung', 'https://www.instagram.com/sambelcossmaknunung/', 'Kemiri, Margosari, Kec. Pengasih, Kabupaten Kulon Progo, Daerah Istimewa Yogyakarta 55652', '09.00-21.00', -7.860459, 110.165228, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(54, 2, 'IWAK KALEN', 'https://www.instagram.com/iwakkalen.official/', 'Area Sawah, Wates, Kabupaten Kulon Progo, Daerah Istimewa Yogyakarta 55651', '09.00-21.00', -7.861189, 110.154221, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(55, 2, 'Kebon Ndhelik', 'https://www.instagram.com/kebon_ndhelik/', 'Jl. Brigjen Katamso No.58, Wates, Kabupaten Kulon Progo, Daerah Istimewa Yogyakarta 55651', '06.00-21.00', -7.863946, 110.156968, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(56, 3, 'Parana Cafe Patuk', 'https://www.instagram.com/paranapatuk/', 'Patuk, Kec. Patuk, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55862', '09.00-21.00', -7.848615, 110.481671, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(57, 3, 'Waroeng Seafood Pak Jons', 'https://www.instagram.com/waroeng_seafood_pakjons/', 'Seneng, Siraman, Kec. Wonosari, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55851', '11.00-22.00', -7.971408, 110.588483, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(58, 3, 'Warung Simbok', 'https://www.instagram.com/iniwarungsimbok/', 'Jl.Wonosari-Yogyakarta KM. 5, Bandung, Playen, Bandung, Kec. Playen, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55861', '09.00-19.00', -7.929759, 110.567523, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(59, 3, 'Tahu Gimbal Pak YONO', 'https://www.instagram.com/tahugimbalpakyono.wonosari/', 'Trimulyo I, Kepek, Kec. Wonosari, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55813', '08.00-habis', -7.968104, 110.597663, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(60, 3, 'Gubug Sorjati', 'https://www.instagram.com/sorjati/', 'Gg. Sindoro, Jeruksari, Wonosari, Kec. Wonosari, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55851', '07.00-16.00\r\nMinggu tutup', -7.960631, 110.60452, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(61, 3, 'PAWON ALAS Resto & Coffe', 'https://www.instagram.com/pawonalasresto/', 'Area Hutan, Gading, Kec. Playen, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55861', '11.00-19.00\r\nSenin tutup', -7.893127, 110.547323, 'https://rumahmakanapi.000webhostapp.com/img/resto_1.png'),
+(62, 3, 'Pawon Mercon', 'https://www.instagram.com/pawonmercon/', 'Jalan Pemuda, Wonosari, Gadungsari, Wonosari, Kec. Wonosari, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55851', '07.30-19.00', -7.966637, 110.61079, 'https://rumahmakanapi.000webhostapp.com/img/resto_2.png'),
+(63, 3, 'mojok.kedai', 'https://www.instagram.com/mojok_kedai/', 'Jl. Playen, Jongkang, Sariharjo, Ngaglik, Kabupaten Gunung Kidul, Special Region of Yogyakarta 55861', '08.30-22.30', -7.742255, 110.379273, 'https://rumahmakanapi.000webhostapp.com/img/resto_3.png'),
+(64, 3, 'Omah Kampoeng Resto', 'https://www.instagram.com/omahkampoeng_kuliner_gk/', 'Jl. Raya Wonosari-Semanu No.52, Wukirsari, Baleharjo, Kec. Semanu, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55893', '09.00-19.00', -7.981927, 110.617572, 'https://rumahmakanapi.000webhostapp.com/img/resto_4.png'),
+(65, 3, 'Pasta Kangen', 'https://www.instagram.com/pasta_kangenwonosari/', 'Pandansari, Wonosari, Kec. Wonosari, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55851', '11.00-21.00', -7.963531, 110.608222, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png'),
+(66, 3, 'Gathot Thiwul Yu Tum', 'https://www.instagram.com/gatotthiwulyu/', 'Jl. Pramuka No.36, Pandansari, Wonosari, Kec. Wonosari, Kabupaten Gunung Kidul, Daerah Istimewa Yogyakarta 55812', '06.00-20.30', -7.963797, 110.609138, 'https://rumahmakanapi.000webhostapp.com/img/resto_5.png');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `kota`
+--
+ALTER TABLE `kota`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `rumah_makan`
+--
+ALTER TABLE `rumah_makan`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `kota_id` (`kota_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `kota`
+--
+ALTER TABLE `kota`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `rumah_makan`
+--
+ALTER TABLE `rumah_makan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `rumah_makan`
+--
+ALTER TABLE `rumah_makan`
+  ADD CONSTRAINT `rumah_makan_ibfk_1` FOREIGN KEY (`kota_id`) REFERENCES `kota` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
