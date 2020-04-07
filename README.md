@@ -1,31 +1,31 @@
 # Project Rumah Makan (CORE API)
 
-## Require
+## Kebutuhan
 
-- PHP 
-- MysqlDB
+- PHP 7
+- MysqlDB or MariaDB
 
-## How to run
+## Cara Menjalankan
 
-- open cmd in this directory and type 
+- buka cmd di direktori ini lalu ketik
     ```
         
         php -S {YOUR_IP}:80
 
     ```
-    or
+    atau
 
      ```
         
         php -S localhost:80
 
     ```
-- open web browser and go to `localhost:80`
+- buka web browser dan menuju url `localhost:80`
 
 
 ## Api
 
-- All rumah makan
+- Daftar rumah makan
 
 ```
 
@@ -34,7 +34,7 @@ http://localhost/api/all_rumah_makan.php?search_by=nama&search_value=RM&order_by
 
 ```
 
-- All closes rumah makan
+- Daftar rumah makan terdekat dengan radius dan posisi user
 
 ```
 
